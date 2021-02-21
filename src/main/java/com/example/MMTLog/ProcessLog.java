@@ -6,6 +6,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,16 +24,30 @@ public class ProcessLog {
 
         try (FileReader reader = new FileReader(filePath))
         {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-            System.out.println("Read JSON file " + obj);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String json = "";
+            StringBuilder sb = new StringBuilder();
+            String line = bufferedReader.readLine();
 
-//            JSONArray fileInput = (JSONArray) obj;
-//            System.out.println(fileInput);
-//
+            while (line != null) {
+                sb.append(line);
+                sb.append("\n");
+                Object obj = jsonParser.parse(line);
+                System.out.println("Read JSON file " + obj);
+                saveFileData( (JSONObject) obj, keys );
+                line = bufferedReader.readLine();
+            }
+
+//            //Read JSON file
+//            Object obj = jsonParser.parse(json);
+//            System.out.println("Read JSON file " + obj);
+//            saveFileData( (JSONObject) obj, keys );
+
+
+
 //            //Iterate over employee array
 //            fileInput.forEach( emp -> saveFileData( (JSONObject) emp, keys ) );
-            saveFileData( (JSONObject) obj, keys );
+////            saveFileData( (JSONObject) obj, keys );
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

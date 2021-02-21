@@ -20,6 +20,8 @@ public class MmtLogApplication {
 
 		System.out.println("Please provide the multiple values on which single occurrence has to find");
 		String findOnSingleValueString = scanner.nextLine();
+
+		System.out.println("Please provide the input values on which multiple occurrence has to find");
 		String findOnMultipleString = scanner.nextLine();
 
 		String[] keys = keysString.split(" ");
