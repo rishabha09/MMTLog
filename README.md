@@ -8,13 +8,18 @@ eg : /home/delhivery/MMTLog/src/main/java/com/example/MMTLog/Input.text
 At second line provide the keys name can be present in json file.
 eg: pfm level step timestamp
 
-At third line provide the values name on which we have to find occurrence on single value.
-I am taking multiplue values in input.
-eg: DESKTOP DEBUG
-result would be
-DESKTOP 4 
-DEBUG 4
+At third line provide inputs to test.
+1- to test the Single value
+eg: DESKTOP INFO
+it will check for DESKTOP and then INFO
 
-At forth line provide the input to find occurence on multiple values.
-eg: DESKTOP and DEBUG
-eg: DESKTOP or DEBUG
+2- to test on multiple values based on AND
+eg: DESKTOP and INFO
+it will check on DESKTOP and INFO
+
+2- to test on multiple values based on OR
+eg: DESKTOP or INFO
+it will check on DESKTOP or INFO
+
+
+
