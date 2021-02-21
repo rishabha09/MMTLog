@@ -17,7 +17,7 @@ it will check for DESKTOP and then INFO
 eg: DESKTOP and INFO
 it will check on DESKTOP and INFO
 
-2- to test on multiple values based on OR
+3- to test on multiple values based on OR
 eg: DESKTOP or INFO
 it will check on DESKTOP or INFO
 
