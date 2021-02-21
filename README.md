@@ -2,10 +2,11 @@
 
 How to provide inputs to run the application successfully
 
-At first line you have to provide file path without in quotes.
+At first line you have to provide file path without quotes.
 eg : /home/delhivery/MMTLog/src/main/java/com/example/MMTLog/Input.text
 
 At second line provide the keys name can be present in json file.
+I am taking json keys name in input.
 eg: pfm level step timestamp
 
 At third line provide inputs to test.
